@@ -6,6 +6,8 @@ import {
   space,
   color,
   order,
+  justifySelf,
+  alignContent,
 } from 'styled-system'
 
 export const Box = styled.div`
@@ -15,6 +17,7 @@ export const Box = styled.div`
   ${color}
   ${flex}
   ${order}
+  ${justifySelf}
 `
 Box.propTypes = {
   ...space.propTypes,
@@ -22,4 +25,22 @@ Box.propTypes = {
   ...color.propTypes,
   ...flex.propTypes,
   ...order.propTypes,
+  ...justifySelf.propTypes,
+}
+
+export const Flex = styled(Box)`
+  display: flex;
+  ${flexDirection}
+  ${flexWrap}
+  ${alignItems}
+  ${alignContent}
+  ${justifyContent}
+`
+
+Flex.propTypes = {
+  ...flexDirection.propTypes,
+  ...flexWrap.propTypes,
+  ...alignItems.propTypes,
+  ...alignContent.propTypes,
+  ...justifyContent.propTypes
 }
