@@ -1,1 +1,1 @@
-# diez-ui
+# diez-components
