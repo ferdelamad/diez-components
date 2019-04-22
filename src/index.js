@@ -11,6 +11,7 @@ import {
   flex,
   flexDirection,
   flexWrap,
+  fontFamily,
   fontSize,
   fontWeight,
   gridGap,
@@ -20,9 +21,12 @@ import {
   gridTemplateRows,
   justifySelf,
   justifyContent,
+  letterSpacing,
+  lineHeight,
   order,
   space,
   style,
+  textAlign,
   width,
 } from 'styled-system'
 
@@ -85,19 +89,32 @@ Grid.propTypes = {
   ...gridTemplateRows.propTypes,
 }
 
-export const Button = styled(Box)`
+export const Text = styled(Box)`
+  ${fontFamily}
+  ${fontSize}
+  ${fontWeight}
+  ${letterSpacing}
+  ${lineHeight}
+  ${textAlign}
+`
+
+Text.propTypes = {
+  ...fontFamily.propTypes,
+  ...fontSize.propTypes,
+  ...fontWeight.prototypes,
+  ...letterSpacing.propTypes,
+  ...lineHeight.propTypes,
+  ...textAlign.propTypes,
+}
+
+export const Button = styled(Text)`
   display: inline-block;
-  border: 0;
   color: #ffffff;
-  font-family: inherit;
-  font-weight: bold;
   transition: all .2s ease-in-out;
-  text-align: center;
   text-decoration: none;
   ${borders}
   ${borderColor}
   ${borderRadius}
-  ${fontWeight}
 
   :hover { transform: scale(1.05); }
 `
@@ -113,10 +130,14 @@ Button.propTypes = {
 Button.defaultProps = {
   as: 'button',
   bg: 'coral',
+  border: 0,
   borderRadius: 4,
+  fontSize: 'inherit',
+  fontWeight: 'bold',
   m: 0,
   px: 3,
   py: 2,
+  textAlign: 'center'
 }
 
 
