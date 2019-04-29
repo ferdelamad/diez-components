@@ -37,6 +37,7 @@ import {
 
 export const Box = styled.div`
   box-sizing: border-box;
+  ${borders}
   ${space}
   ${width}
   ${color}
@@ -107,14 +108,10 @@ Text.propTypes = {
   ...textAlign.propTypes,
 }
 
+//removed bg radius and bg color
 export const Button = styled(Text)`
   display: inline-block;
-  color: #ffffff;
   transition: all .2s ease-in-out;
-  text-decoration: none;
-  ${borders}
-  ${borderColor}
-  ${borderRadius}
 
   :hover { transform: scale(1.05); }
 `
@@ -132,12 +129,43 @@ Button.defaultProps = {
   bg: 'coral',
   border: 0,
   borderRadius: 4,
+  color: '#fff',
+  cursor: 'pointer',
   fontSize: 'inherit',
-  fontWeight: 'bold',
   m: 0,
   px: 3,
   py: 2,
-  textAlign: 'center'
+  textAlign: 'center',
+  textDecoration: 'none'
 }
 
+export const Input = styled(Text)`
+  display: block;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
+  &:focus {
+    border-color: coral;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(0,123,255,.25)
+  }
+`
+
+Input.defaultProps = {
+  as: 'input',
+  bg: 'coral',
+  backgroundColor: '#fff',
+  border: '1px solid #ced4da',
+  borderRadius: '.25rem',
+  fontSize: '1rem',
+  m: 0,
+  px: 1,
+  py: 2,
+}
+
+//7
+
+//8
+
+//9
+
+//10
