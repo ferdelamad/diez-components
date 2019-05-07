@@ -112,6 +112,7 @@ Text.propTypes = {
 export const Button = styled(Text)`
   display: inline-block;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
   :hover {
     transform: scale(1.05);
@@ -132,7 +133,6 @@ Button.defaultProps = {
   border: 0,
   borderRadius: 4,
   color: '#fff',
-  cursor: 'pointer',
   fontSize: 'inherit',
   m: 0,
   px: 3,
@@ -164,7 +164,24 @@ Input.defaultProps = {
   py: 2,
 };
 
-// 7
+export const Dropdown = styled(Text)`
+  cursor: pointer;
+  user-select: none;
+
+  & > option {
+  }
+`;
+
+Dropdown.defaultProps = {
+  as: 'select',
+  fontFamily: 'inherit',
+  width: '100%',
+  color: '#ffffff',
+  px: '8px',
+  py: '16px',
+  border: '1px solid transparent',
+  borderColor: 'transparent transparent rgba(0, 0, 0, 0.1) transparent',
+};
 
 // 8
 
