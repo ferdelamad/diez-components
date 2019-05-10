@@ -211,6 +211,16 @@ export const Dropdown = ({ children, color, ...props }) => (
 // --- end of experimental component
 
 // 8 Icon
+const iconsMap = new Map([
+  ['arrowUp', '↑'],
+  ['arrowDown', '↓'],
+  ['arrowLeft', '←'],
+  ['arrowRight', '→'],
+])
+
+export const Icon = ({ icon }) => (
+  <Text style={{ display: 'inline-block'}}>{iconsMap.get(icon)}</Text>
+)
 
 // 9
 
