@@ -164,26 +164,53 @@ Input.defaultProps = {
   py: 2,
 };
 
-export const Dropdown = styled(Text)`
-  cursor: pointer;
-  user-select: none;
+// --- experimental component
+const Arrow = styled.span`
+  &::after {
+    position: absolute;
+    content: "";
+    top: 13px;
+    right: 13px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: ${({ color }) => color || 'coral'} transparent transparent transparent;
+  }
+`
+const Select = styled(Text)`
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
-  & > option {
+  &, option {
+    user-select: none;
+    cursor: pointer;
   }
 `;
 
-Dropdown.defaultProps = {
+Select.defaultProps = {
   as: 'select',
+  fontSize: '1rem',
   fontFamily: 'inherit',
   width: '100%',
-  color: '#ffffff',
-  px: '8px',
-  py: '16px',
+  paddingLeft: '8px',
+  paddingRight: '36px',
+  py: '4px',
   border: '1px solid transparent',
   borderColor: 'transparent transparent rgba(0, 0, 0, 0.1) transparent',
 };
 
-// 8
+export const Dropdown = ({ children, color, ...props }) => (
+  <div style={{ position: 'relative', display: 'inline-block'}}>
+    <Select {...props}>
+      { children }
+    </Select>
+    <Arrow color={color} />
+  </div>
+)
+// --- end of experimental component
+
+// 8 Icon
 
 // 9
 
