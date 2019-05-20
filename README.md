@@ -6,6 +6,8 @@ npm i diez-components
 ```
 ## Components
 Card, Flex, Grid, Button, Image, Text, Input, Dropdown, Icon
+## Props and Usage
+diez-components uses styled-system under the hood. Refer to their [docs](https://styled-system.com/api) for props and basic usage.
 ## Examples
 Reponsive grid with two columns
 ```js

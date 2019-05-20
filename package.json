@@ -1,6 +1,6 @@
 {
   "name": "diez-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/ferdelamad/diez-ui.git"
   },
-  "keywords": [],
+  "keywords": [
+    "diez components",
+    "diez-components",
+    "react ui library",
+    "components library",
+    "atomic components",
+    "atomic react components",
+    "design system",
+    "react components library"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
