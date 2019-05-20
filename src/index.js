@@ -6,6 +6,7 @@ import {
   borders,
   borderColor,
   borderRadius,
+  boxShadow,
   buttonStyle,
   color,
   flex,
@@ -37,6 +38,7 @@ import {
 export const Card = styled.div`
   box-sizing: border-box;
   ${borders}
+  ${boxShadow}
   ${space}
   ${width}
   ${color}
@@ -47,6 +49,8 @@ export const Card = styled.div`
 `;
 
 Card.propTypes = {
+  ...borders.propTypes,
+  ...boxShadow.propTypes,
   ...space.propTypes,
   ...width.propTypes,
   ...color.propTypes,
