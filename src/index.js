@@ -5,7 +5,6 @@ import {
   alignContent,
   borders,
   borderColor,
-  borderRadius,
   boxShadow,
   buttonStyle,
   color,
@@ -20,6 +19,7 @@ import {
   gridRow,
   gridTemplateColumns,
   gridTemplateRows,
+  height,
   justifySelf,
   justifyContent,
   letterSpacing,
@@ -123,11 +123,10 @@ export const Button = styled(Text)`
   }
 `;
 
-// button style pending
+// button style pending && propTypes
 Button.propTypes = {
   ...borders.propTypes,
   ...borderColor.propTypes,
-  ...borderRadius.propTypes,
   ...fontWeight.propTypes,
 };
 
@@ -227,5 +226,19 @@ export const Icon = ({ icon }) => (
 )
 
 // 9
+export const Image = styled(Card)`
+  max-width: 100%;
+  ${height}
+`
+
+Image.propTypes = {
+  ...height.propTypes,
+}
+
+Image.defaultProps = {
+  as: 'img',
+  height: 'auto',
+  m: 0,
+}
 
 // 10
