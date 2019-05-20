@@ -4,6 +4,8 @@ Ten (Diez) atomic react components
 ```bash
 npm i diez-components
 ```
+## Components
+Card, Flex, Grid, Button, Image, Text, Input, Dropdown, Icon
 ## Examples
 Reponsive grid with two columns
 ```js
