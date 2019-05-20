@@ -1,5 +1,6 @@
 # diez-components ⚛
-Ten (Diez) atomic react components
+- 🔟(Diez) atomic react components
+- 💡Library weight less than ~10KB
 ## Install
 ```bash
 npm i diez-components
