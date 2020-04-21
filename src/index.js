@@ -241,4 +241,4 @@ Image.defaultProps = {
   m: 0,
 }
 
-// Clean up test comments
+/// Clean up test comments
