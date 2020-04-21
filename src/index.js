@@ -241,7 +241,4 @@ Image.defaultProps = {
   m: 0,
 }
 
-// 10
-
-// Test comments for git flow
-// More GF testing
+// Cleanup comments by Fer
